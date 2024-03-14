@@ -1,0 +1,765 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+}
+.container{
+    width: 100%;
+    height: 5700px; 
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 9.7%;
+    padding: 0px 6%;
+    background-color: #171717;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+}
+header .logo img{
+    height: 80%;
+}
+header .logo h1{
+    color: #FF7200;
+    font-size: 16px;
+    margin-left: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.menu{
+    height: 100%;
+    position: relative;
+}
+.menu>ul{
+    display: flex;
+    line-height: 420%;
+    list-style: none;
+}
+.menu>ul>li{
+    position: relative;
+    padding: 0 20px;
+}   
+.menu>ul>li>a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: gainsboro;
+    padding: 10px 0px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+}
+.menu>ul>li>a::before{
+    content: "";
+    background: #f00;
+    height: 5%;
+    width: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.menu>ul>li:hover>a::before{
+    width: 100%;
+}
+.menu>ul>li.has-child::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f107";
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.icons{
+    height: 100%;
+}
+.icons>ul{
+    display: flex;
+    height: 100%;
+    line-height: 420%;
+    list-style: none;
+}
+.icons>ul>li{
+    position: relative;
+    height: 100%;
+}
+.icons>ul>li i {
+    color: #fff;
+    padding: 0 20px;
+    z-index: 2;
+}
+.icons>ul>li::before{
+    content: "";
+    background: #f00;
+    width: 0%;
+    height: 5%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.icons>ul>li:hover::before{
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 100%;
+}
+.icons>ul .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+}
+.icons>ul>li input{
+    position: absolute;
+    right: 0px;
+    top: 30%;
+    width: 100%;
+    height: 100%;
+}
+.icons>ul>li input{
+    border-radius: 50px;
+    width: 350%;
+    height: 45%;
+    color: #000;
+    padding: 0 10px;
+    text-decoration: none;
+    display: none;
+}
+.icons>ul>li:hover input{
+    display: block;
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.icons>ul>li.input:hover i{
+    color: #000;
+    transition: 0.5s;
+}
+.sub-menu{
+    background-color: #000;
+    width: 250px;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sub-menu li{
+    list-style: none;
+    width: 100%; 
+}
+.sub-menu>li>a{
+    text-decoration: none;
+    margin-left: 10%;
+    color: rgb(184, 184, 184);
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+}
+.sub-menu>li:hover{
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.menu>ul>li:hover>.sub-menu{
+    display: block;
+}
+
+.slideshow-container{
+    width: 100%;
+    height: 8%;
+    padding-top: 4%;
+}
+
+.slides {
+    display: none;
+}
+  
+.slideshow-container img {
+    width: 100%;
+    height: auto;
+}
+  
+.slideshow-container button {
+    cursor: pointer;
+}
+  
+.prev, .next {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #F1F1F1;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.prev i, .next i{
+    font-size: 20px;
+}
+.prev {
+    left: 0;
+}
+  
+.next {
+    right: 0;
+}
+
+
+aside{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #171717;
+    width: 100%;
+    height: 2%;
+    margin-top: 5%;
+}
+aside p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+aside p span{
+    color: #fff;
+    font-size: 15px;
+    margin-left: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+article{
+    width: 100%;
+    height: 30%;
+    background-color: #000;
+    margin-bottom: 3%;
+}
+article .content>.content1>h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 3%;
+    font-weight: 700;
+    font-style: normal;
+    font-family: Montserrat, sans-serif;
+}
+
+article .content{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 5% 0;
+}
+article .content>.content1{
+    width: 100%;
+    height: 100%;
+}
+.products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content1 .product{
+    border: 1px solid #fff;
+    width: 25%;
+    padding: 2% 0;
+    text-align: center;
+    background-color: #171717;
+    border: none;
+    border-radius: 10px;
+    margin: 0 1% 1%;
+}
+.product>h6{
+    text-align: center;
+    font-size: 22px;
+    font-family: Montserrat, sans-serif;
+}
+.product>.text{
+    font-size: 14px;
+    font-family: Montserrat, sans-serif;
+    color: #F1F1F1;
+    padding: 5% 0;
+}
+.product .button a {
+    border: 2px solid rgba(255, 255, 255, .5);
+    color: #fff;
+    padding: 2% 5%;
+    display: inline-block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    text-decoration: none;
+}
+article .product .button a:hover{
+    background-color: orangered;
+    outline: none;
+    border: 2px solid orangered;
+}
+article .product img:hover{
+    filter: drop-shadow( 0px 0px 10px #FF7200); 
+}
+.supports{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+}
+.supports .support{
+    background-color: #FF8B10;
+    border-radius: 10px;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.supports .support .fb{
+    width: 100%;
+    height: 50%;
+    margin:  3% auto;
+    text-align: center;
+}
+.fb h6{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    color: #000;
+    padding-bottom: 2%;
+}
+.fb .text{
+    color: #000;
+    font-size: 18px;
+    font-family: Barlow, sans-serif;
+    margin: 0 0 3% 0;
+}
+.fb .button a{
+    text-decoration: none;
+    padding: 1% 5%;
+    display: inline-block;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    background-color: #000;
+}
+.fb .button a:hover{
+    border: 2px solid #fff;
+}
+.events{
+    padding: 50px 0px;
+    width: 100%;
+    height: 390px;
+}
+.events .event h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.events .event>.text{
+    text-align: center;
+}
+.projectss{
+    width: 100%;
+    height: 390px;
+    margin-top: 30px;
+}
+.projectss .projects{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+.projectss .project{
+    width: 37%;
+    height: 90%;
+    margin: 0 10px;
+    background-color: #171717;
+    border-radius: 10px;
+}
+.projectss .project{
+    text-align: center;
+    line-height: 55px;
+}
+.projectss .project h6 a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #f00;
+}
+.projectss .project .text{
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.projectss .project .button a:hover{
+    color: #f00;
+}
+.projectss .project:hover{
+    background-color: #FF8B10;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.shop{
+    width: 100%;
+    height: 20%;
+}
+.shop h2{
+    color:#000;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.shop ul{
+    display: flex;
+    justify-content: center;
+}
+.shop ul li{
+    list-style: none;
+    position: relative;
+}
+.shop ul li a{
+    color: #000;
+    text-decoration: none;
+    padding: 0 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.shop ul>li>a::before{
+    content: "";
+    background: #f00;
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 11px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.shop ul>li:hover>a::before{
+    width: 90%;
+}
+.shop ul>li:first-child>a::before{
+    width: 90%;
+    display: block;
+}
+.shop .contentsss{
+    width: 100%;
+    height: 100%;
+    margin: 5% 0;
+}
+.shop .contents{
+    width: 100%;
+    height: 50%;
+}
+.shop .content{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+.shop .products{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.shop .product{
+    margin: 0 1%;
+    text-align: center;
+    position: relative;
+}
+.shop img{
+    width: 270px;
+    height: 270px;
+    margin-bottom: 10px;
+}
+.shop .namePC{
+    color: #171717;
+    font-size: 18px;
+    font-family: Barlow, sans-serif;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.shop .cost span{
+    color: #000;
+    font-size: 16px;
+    font-family: Barlow, sans-serif;
+    font-weight: bold;
+}
+.shop .cost sup{
+    color: #000;
+    font-size: 16px;
+    font-family: Barlow, sans-serif;
+    font-weight: bold;
+}
+.shop button{
+    color: #000;
+    background-color: #f00;
+    text-decoration: none;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 2% 3%;
+    border-radius: 5px;
+}
+.shop button:hover{
+    background-color: #FF7200;
+}
+.cart{
+    width: 26%;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    background-color: #FF7200;
+    overflow-y: scroll;
+    padding: 5% 10px;
+    right: -100%;
+    transition: all 0.5s;
+}
+.cart form{
+    width: 100%;
+}
+.cart table{
+    width: 100%;
+}
+.cart h2{
+    margin-bottom: 20px;
+}
+.cart tr th{
+    color: #000;
+}
+.cart tr th:first-child{
+    text-align: left;
+}
+.cart tr td{
+    border-bottom: 1px solid #000;
+    padding-bottom: 12px;
+}
+.cart tr td:last-child{
+    text-align: right;
+}
+.cart tr th:last-child{
+    text-align: right;
+}
+.cart button{
+    padding: 5px 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #000;
+    margin:  10px auto;
+}
+.cart button:hover{
+    background-color: #f00;
+    color: #F1F1F1;
+}
+.item{
+    width: 100%;
+    height: 10%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item .text{
+    width: 30%;
+    padding: 0px 40px;
+}
+.item .image {
+    width: 45%;
+    height: 410px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item img{
+    width: 90%;
+    height: 370px;
+}
+.item h2{
+    padding: 30px 0px;
+}
+.item p{
+    font-size: 16px;
+    font-family: Barlow, sans-serif;
+    padding: 10px 0px;
+}
+.whyqs{
+    width: 100%;
+    height: 5%;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+}
+.whyqs .text{
+    width: 80%;
+    padding: 50px 0px;
+}
+.whyqs h2{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.whyqs p{
+    border-left: 2px solid #fff;
+    padding-left: 30px;
+    font-size: 20px;
+    font-family: Barlow, sans-serif;
+}
+.news{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.news .content{
+    width: 100%;
+}
+.news h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.news .products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.news .product{
+    width: 25%;
+    height: 500px;
+    background-color: #fff;
+    text-align: center;
+    margin: 0px 15px;
+}
+.news .product img{
+    width: 100%;
+    height: 220px;
+    margin: 0;
+    padding: 0;
+}
+.news h6{
+    color: #000;
+    font-size: 25px;
+}
+.news .gach{
+    color: #000;
+}
+.news .text{
+    color: #000;
+    font-family: Barlow, sans-serif;
+    font-size: 23.5px;
+}
+.news .button a{
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #f00;
+    color: #f00;
+}
+.news .button a:hover{
+    color: #fff;
+    background-color: #f00;
+}
+footer{
+    width: 100%;
+    height: 12%;
+    background-color: #171717;
+    padding: 5% 10% 0% 10%;
+    cursor: pointer;
+}
+footer .top{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 7%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+footer .top .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-right: 3%;
+}
+footer .top .logo h1{
+    font-size: 30px;
+    color: #FF7200;
+    margin-left: 2%;
+}
+footer .top img{
+    width: 100px;
+    height: 100px;
+}
+footer .top .information p{
+    line-height: 250%;
+    font-family: Barlow, sans-serif;
+    font-size: 20px;
+}
+footer .bottom{
+    width: 100%;
+    height: 45%;
+}
+footer .rowss{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+footer h2{
+    font-size: 20px;
+    padding-bottom: 2%;
+}
+footer .items{
+    margin: 5% 0;
+    font-size: 15px;
+}
+footer .items i{
+    color: #FF7200;
+}
+footer .items span{
+    font-family: Barlow, sans-serif;
+    font-size: 18px;
+}
+footer .bottomm{
+    width: 100%;
+    height: 15%;
+}
+footer .bottomm .icon{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+footer .bottomm .icon a{
+    text-decoration: none;
+    width: 4%;
+    height: 50%;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1%;
+}
+footer .bottomm .icon a i{
+    font-size: 30px;
+}
+footer .bottomm .icon a #icon1:hover{
+    color: #3B5998;
+}
+footer .bottomm .icon a #icon2:hover{
+    color: #ff0000;
+}
+footer .bottommm{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid gray;
+}
